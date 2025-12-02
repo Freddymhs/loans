@@ -1,0 +1,13 @@
+include: package:very_good_analysis/analysis_options.5.1.0.yaml
+
+linter:
+  rules:
+    # Disable rules that are too strict for this project
+    public_member_api_docs: false
+    lines_longer_than_80_chars: false
+
+analyzer:
+  errors:
+    # Ignore certain errors if needed
+    missing_required_param: warning
+    missing_return: warning
