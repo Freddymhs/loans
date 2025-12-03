@@ -1,24 +1,15 @@
-# 📋 Backlog - MyLends
+# Backlog - My-Lends v2.0
 
-## Fases del Proyecto
+## 📋 Fases de Desarrollo
 
-- **[FASE_0.md](FASE_0.md)** ✅ - Base Sólida (COMPLETADA)
-- **[FASE_1.md](FASE_1.md)** 📍 - Autenticación (PRÓXIMA)
-- **[FASE_2.md](FASE_2.md)** - Gestión de Préstamos
-- **[FASE_3.md](FASE_3.md)** - Testing & Polish
-- **[FASE_4.md](FASE_4.md)** - Optimizaciones
-- **[FASE_5.md](FASE_5.md)** - Features Extras
-- **[FASE_6.md](FASE_6.md)** - MVP Final
+- **FASE_0.md** - Estado actual ✅
+- **FASE_1_AUTENTICACION.md** - Google OAuth + Root ID (8-10h)
+- **FASE_2_CORE_PRESTAMOS.md** - CRUD real + Supabase (10-12h)
+- **FASE_3_ESTADOS_DEVOLUCIONES.md** - Cambios de estado (8-10h)
+- **FASE_4_FILTROS_REPORTES.md** - Filtros + Analytics (8-10h)
+
+**Total: 45-55 horas**
 
 ---
 
-## Timeline
-
-```
-Semana 1: FASE 0 ✅ + FASE 1
-Semana 2: FASE 1 finaliza + FASE 2
-Semana 3: FASE 2 finaliza + FASE 3 + FASE 4
-Semana 4: FASE 5 + FASE 6 → 🚀 LANZAMIENTO
-```
-
-**Total**: ~22 horas | ~4 semanas
+Para arquitectura y decisiones técnicas, ver: `/entrevista/arquitectura_implementado.md`
