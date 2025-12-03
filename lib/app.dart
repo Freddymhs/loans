@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loans/2_application/bloc/theme/theme_cubit.dart';
 import 'package:loans/2_application/bloc/theme/theme_state.dart';
+import 'package:loans/2_application/screens/loans_home_screen.dart';
 import 'package:loans/3_utils/config/theme.dart';
 import 'package:loans/injection_container.dart';
 
@@ -19,11 +20,8 @@ class MyLendsApp extends StatelessWidget {
             theme: AppTheme.lightTheme,
             darkTheme: AppTheme.darkTheme,
             themeMode: themeState.isDarkMode ? ThemeMode.dark : ThemeMode.light,
-            home: const Scaffold(
-              body: Center(
-                child: Text('🏗️ FASE 0 - Base lista para crecer'),
-              ),
-            ),
+            debugShowCheckedModeBanner: false,
+            home: const LoansHomeScreen(),
           );
         },
       ),
