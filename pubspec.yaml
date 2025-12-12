@@ -38,7 +38,6 @@ dependencies:
   cupertino_icons: ^1.0.8
 
   # ============== DATA & SERIALIZATION ==============
-  json_serializable: ^6.7.0
   json_annotation: ^4.8.0
   dartz: ^0.10.1
   get_it: ^7.6.0

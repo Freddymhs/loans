@@ -6,15 +6,15 @@ import 'package:loans/3_utils/errors/failures.dart';
 ///
 /// Proporciona una interfaz consistente para todos los use cases
 /// Type parameters:
-/// - [Type]: El tipo de dato que retorna en caso de éxito
+/// - [T]: El tipo de dato que retorna en caso de éxito
 /// - [Params]: Los parámetros que recibe el use case
-abstract class UseCase<Type, Params> {
-  Future<Either<Failure, Type>> call(Params params);
+abstract class UseCase<T, Params> {
+  Future<Either<Failure, T>> call(Params params);
 }
 
 /// Use case que no recibe parámetros
-abstract class UseCaseWithoutParams<Type> {
-  Future<Either<Failure, Type>> call();
+abstract class UseCaseWithoutParams<T> {
+  Future<Either<Failure, T>> call();
 }
 
 /// Parámetros vacíos (para use cases sin parámetros)
