@@ -60,5 +60,12 @@ ios/.symlinks/
 .cloude/
 .serena/
 
+# Sistema operativo
+Thumbs.db
+
+# Hive (local storage)
+*.hive
+*.lock
+
 # Project specific
 entrevista
