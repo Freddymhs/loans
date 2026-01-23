@@ -51,8 +51,9 @@ ios/Pods/
 ios/.symlinks/
 
 # Environment files
-.env
-.env.*
+/.env
+.env.local
+.env.*.local
 !.env.example
 
 # Claude/AI tools (personal)
