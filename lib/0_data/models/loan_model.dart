@@ -1,5 +1,9 @@
+import 'package:json_annotation/json_annotation.dart';
 import 'package:loans/1_domain/entities/loan_entity.dart';
 
+part 'loan_model.g.dart';
+
+@JsonSerializable()
 class LoanModel {
   final String id;
   final String lenderId;
@@ -10,7 +14,10 @@ class LoanModel {
   final DateTime loanDate;
   final DateTime dueDate;
   final double? interestRate;
+
+  @JsonKey(unknownEnumValue: LoanStatus.pending)
   final LoanStatus status;
+
   final DateTime createdAt;
   final DateTime? updatedAt;
 
@@ -29,46 +36,10 @@ class LoanModel {
     this.updatedAt,
   });
 
-  factory LoanModel.fromJson(Map<String, dynamic> json) {
-    return LoanModel(
-      id: json['id'] as String,
-      lenderId: json['lenderId'] as String,
-      borrowerId: json['borrowerId'] as String,
-      amount: (json['amount'] as num).toDouble(),
-      currency: json['currency'] as String,
-      description: json['description'] as String,
-      loanDate: DateTime.parse(json['loanDate'] as String),
-      dueDate: DateTime.parse(json['dueDate'] as String),
-      interestRate: json['interestRate'] != null
-          ? (json['interestRate'] as num).toDouble()
-          : null,
-      status: LoanStatus.values.firstWhere(
-        (status) => status.name == json['status'],
-        orElse: () => LoanStatus.pending,
-      ),
-      createdAt: DateTime.parse(json['createdAt'] as String),
-      updatedAt: json['updatedAt'] != null
-          ? DateTime.parse(json['updatedAt'] as String)
-          : null,
-    );
-  }
+  factory LoanModel.fromJson(Map<String, dynamic> json) =>
+      _$LoanModelFromJson(json);
 
-  Map<String, dynamic> toJson() {
-    return {
-      'id': id,
-      'lenderId': lenderId,
-      'borrowerId': borrowerId,
-      'amount': amount,
-      'currency': currency,
-      'description': description,
-      'loanDate': loanDate.toIso8601String(),
-      'dueDate': dueDate.toIso8601String(),
-      'interestRate': interestRate,
-      'status': status.name,
-      'createdAt': createdAt.toIso8601String(),
-      'updatedAt': updatedAt?.toIso8601String(),
-    };
-  }
+  Map<String, dynamic> toJson() => _$LoanModelToJson(this);
 
   LoanEntity toEntity() {
     return LoanEntity(

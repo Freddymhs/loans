@@ -5,7 +5,7 @@
 | Fase                        | Status | Progreso |
 | --------------------------- | ------ | -------- |
 | FASE_0                      | ✅     | 100%     |
-| FASE_1_AUTENTICACION        | 🔄     | 0%       |
+| FASE_1_AUTENTICACION        | 🔄     | 8%       |
 | FASE_2_CORE_PRESTAMOS       | ⏳     | 0%       |
 | FASE_3_ESTADOS_DEVOLUCIONES | ⏳     | 0%       |
 | FASE_4_FILTROS_REPORTES     | ⏳     | 0%       |
@@ -14,7 +14,7 @@
 
 ## 📍 Actual
 
-FASE_1 → Tarea 1.1: Entities & Models
+FASE_1 → Tarea 1.2: Repository Interfaces
 
 ---
 

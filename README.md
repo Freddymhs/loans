@@ -117,7 +117,7 @@ Ver `/backlog/` para detalles de cada fase.
 ✅ Documentación completa (ARQUITECTURA.md)
 ✅ Preparado para escalar a modular (packages/)
 
-## 🧪 Testing
+## 🧪 Testing & Comandos
 
 ```bash
 # Ejecutar tests
@@ -128,6 +128,9 @@ flutter analyze
 
 # Formateo
 dart format lib/
+
+# Generar código (después de modificar models con @JsonSerializable)
+dart run build_runner build --delete-conflicting-outputs
 ```
 
 ## 📊 Arquitectura: Flujo de Datos
