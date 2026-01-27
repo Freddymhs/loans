@@ -1,5 +1,5 @@
-import 'package:loans/0_data/datasources/auth_datasource.dart';
-import 'package:loans/0_data/models/user_model.dart';
+import 'package:loans/1_data/datasources/auth_datasource.dart';
+import 'package:loans/1_data/models/user_model.dart';
 import 'package:loans/3_utils/errors/exceptions.dart' as app_exceptions;
 import 'package:supabase_flutter/supabase_flutter.dart';
 

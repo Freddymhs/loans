@@ -1,4 +1,4 @@
-import 'package:loans/0_data/models/user_model.dart';
+import 'package:loans/1_data/models/user_model.dart';
 
 abstract class AuthDataSource {
   Future<UserModel> loginWithGoogle();

@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:loans/1_domain/usecases/loan/create_loan_usecase.dart';
-import 'package:loans/1_domain/usecases/loan/get_loans_usecase.dart';
-import 'package:loans/1_domain/usecases/loan/mark_loan_as_returned_usecase.dart';
+import 'package:loans/0_domain/usecases/loan/create_loan_usecase.dart';
+import 'package:loans/0_domain/usecases/loan/get_loans_usecase.dart';
+import 'package:loans/0_domain/usecases/loan/mark_loan_as_returned_usecase.dart';
 import 'package:loans/2_application/bloc/loans/loans_event.dart';
 import 'package:loans/2_application/bloc/loans/loans_state.dart';
 

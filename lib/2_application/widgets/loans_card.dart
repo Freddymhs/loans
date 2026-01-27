@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loans/1_domain/entities/loan_entity.dart';
+import 'package:loans/0_domain/entities/loan_entity.dart';
 import 'package:loans/3_utils/config/theme.dart';
 import 'package:loans/3_utils/date_time_extensions.dart';
 

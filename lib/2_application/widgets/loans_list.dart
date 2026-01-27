@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loans/1_domain/entities/loan_entity.dart';
+import 'package:loans/0_domain/entities/loan_entity.dart';
 import 'package:loans/2_application/screens/loans_home_screen.dart';
 import 'package:loans/2_application/widgets/loans_card.dart';
 import 'package:loans/3_utils/config/theme.dart';

@@ -1,4 +1,4 @@
-import 'package:loans/0_data/models/loan_model.dart';
+import 'package:loans/1_data/models/loan_model.dart';
 
 abstract class LoanDataSource {
   Future<List<LoanModel>> getLoans(String userId);
