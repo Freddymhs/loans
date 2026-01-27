@@ -2,14 +2,20 @@
 
 ## 📋 Fases de Desarrollo
 
-- **FASE_0.md** - Estado actual ✅
-- **FASE_1_AUTENTICACION.md** - Google OAuth + Root ID (8-10h)
-- **FASE_2_CORE_PRESTAMOS.md** - CRUD real + Supabase (10-12h)
-- **FASE_3_ESTADOS_DEVOLUCIONES.md** - Cambios de estado (8-10h)
-- **FASE_4_FILTROS_REPORTES.md** - Filtros + Analytics (8-10h)
+| Fase                        | Status | Progreso |
+| --------------------------- | ------ | -------- |
+| FASE_0                      | ✅     | 100%     |
+| FASE_1_AUTENTICACION        | 🔄     | 0%       |
+| FASE_2_CORE_PRESTAMOS       | ⏳     | 0%       |
+| FASE_3_ESTADOS_DEVOLUCIONES | ⏳     | 0%       |
+| FASE_4_FILTROS_REPORTES     | ⏳     | 0%       |
 
-**Total: 45-55 horas**
+**Total estimado: 45-55 horas**
+
+## 📍 Actual
+
+FASE_1 → Tarea 1.1: Entities & Models
 
 ---
 
-Para arquitectura y decisiones técnicas, ver: `/entrevista/arquitectura_implementado.md`
+Para arquitectura y decisiones técnicas, ver: `/entrevista/ARQUITECTURA_IMPLEMENTADA.md`
