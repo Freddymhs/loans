@@ -94,15 +94,15 @@ lib/
 
 ## 🎯 Fases de Desarrollo
 
-| Fase | Status | Descripción |
-|------|--------|-------------|
-| **FASE 0** | ✅ Completa | Base sólida (arquitectura, error handling, linting) |
-| **FASE 1** | 📋 Pendiente | Autenticación (Google Sign In, validación) |
-| **FASE 2** | 📋 Pendiente | Gestión de préstamos (CRUD) |
-| **FASE 3** | 📋 Pendiente | Dashboard (resumen, estadísticas) |
-| **FASE 4** | 📋 Pendiente | Usuarios/Deudores |
-| **FASE 5** | 📋 Pendiente | Reportes |
-| **FASE 6** | 📋 Pendiente | Optimización + Producción |
+| Fase       | Status       | Descripción                                         |
+| ---------- | ------------ | --------------------------------------------------- |
+| **FASE 0** | ✅ Completa  | Base sólida (arquitectura, error handling, linting) |
+| **FASE 1** | 📋 Pendiente | Autenticación (Google Sign In, validación)          |
+| **FASE 2** | 📋 Pendiente | Gestión de préstamos (CRUD)                         |
+| **FASE 3** | 📋 Pendiente | Dashboard (resumen, estadísticas)                   |
+| **FASE 4** | 📋 Pendiente | Usuarios/Deudores                                   |
+| **FASE 5** | 📋 Pendiente | Reportes                                            |
+| **FASE 6** | 📋 Pendiente | Optimización + Producción                           |
 
 Ver `/backlog/` para detalles de cada fase.
 
