@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
-import 'package:loans/0_data/datasources/local/loan_local_datasource.dart';
-import 'package:loans/0_data/datasources/remote/loan_remote_datasource.dart';
+import 'package:loans/0_data/datasources/loan_datasource.dart';
+import 'package:loans/0_data/datasources/loan_local_datasource.dart';
 import 'package:loans/0_data/models/loan_model.dart';
 import 'package:loans/0_data/repositories/loan_repository_impl.dart';
 import 'package:loans/1_domain/entities/loan_entity.dart';
@@ -23,8 +23,8 @@ Future<void> setupServiceLocator() async {
   final sharedPreferences = await SharedPreferences.getInstance();
   getIt.registerSingleton<SharedPreferences>(sharedPreferences);
 
-  getIt.registerSingleton<LoanRemoteDataSource>(
-    _MockLoanRemoteDataSource(),
+  getIt.registerSingleton<LoanDataSource>(
+    _MockLoanDataSource(),
   );
 
   getIt.registerSingleton<LoanLocalDataSource>(
@@ -33,7 +33,7 @@ Future<void> setupServiceLocator() async {
 
   getIt.registerSingleton<LoanRepository>(
     LoanRepositoryImpl(
-      remoteDataSource: getIt<LoanRemoteDataSource>(),
+      remoteDataSource: getIt<LoanDataSource>(),
       localDataSource: getIt<LoanLocalDataSource>(),
     ),
   );
@@ -61,7 +61,7 @@ Future<void> setupServiceLocator() async {
   );
 }
 
-class _MockLoanRemoteDataSource implements LoanRemoteDataSource {
+class _MockLoanDataSource implements LoanDataSource {
   @override
   Future<List<LoanModel>> getLoans(String userId) async {
     return [];

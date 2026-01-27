@@ -1,6 +1,6 @@
 import 'package:loans/0_data/models/loan_model.dart';
 
-abstract class LoanRemoteDataSource {
+abstract class LoanDataSource {
   Future<List<LoanModel>> getLoans(String userId);
 
   Future<LoanModel> createLoan(LoanModel loan);
