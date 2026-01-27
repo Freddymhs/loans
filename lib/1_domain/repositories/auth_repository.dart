@@ -4,14 +4,14 @@ import 'package:loans/3_utils/errors/failures.dart';
 
 abstract class AuthRepository {
   /// Sign in with Google
-  Future<Either<Failure, UserEntity>> signInWithGoogle();
+  Future<Either<Failure, UserEntity>> loginWithGoogle();
 
   /// Sign out the current user
-  Future<Either<Failure, void>> signOut();
+  Future<Either<Failure, void>> logOut();
 
   /// Get the current authenticated user
   Future<Either<Failure, UserEntity?>> getCurrentUser();
 
   /// Check if user is authenticated
-  Future<Either<Failure, bool>> isAuthenticated();
+  Future<Either<Failure, bool>> isSessionActive();
 }
