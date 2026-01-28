@@ -10,6 +10,7 @@
 ## 📋 Descripción
 
 Implementar sistema de autenticación con Supabase (Google OAuth) y gestión de usuarios con soporte para:
+
 - Login/Signup con Google
 - Perfil de usuario con Root ID único
 - Selección/creación de empresa durante onboarding
@@ -20,6 +21,7 @@ Implementar sistema de autenticación con Supabase (Google OAuth) y gestión de 
 ## 🎯 Requisitos Funcionales
 
 ### 1.1 Autenticación (Google OAuth)
+
 - [x] Integración con Supabase Auth
 - [x] Sign in con Google
 - [x] Sign up con Google (nuevo usuario)
@@ -28,6 +30,7 @@ Implementar sistema de autenticación con Supabase (Google OAuth) y gestión de 
 - [x] Recuperación de contraseña (si aplica)
 
 ### 1.2 Onboarding de Usuario
+
 - [x] Pantalla de selección de Root ID (único, no repetible)
 - [x] Validación de Root ID:
   - No vacío
@@ -40,6 +43,7 @@ Implementar sistema de autenticación con Supabase (Google OAuth) y gestión de 
 - [x] Guardar selección en users table
 
 ### 1.3 Gestión de Perfil
+
 - [x] Pantalla de perfil de usuario
 - [x] Ver información (email, nombre, root ID, empresa actual)
 - [x] Editar nombre display
@@ -48,6 +52,7 @@ Implementar sistema de autenticación con Supabase (Google OAuth) y gestión de 
 - [x] Logout
 
 ### 1.4 Persistencia de Sesión
+
 - [x] Token guardado localmente (SharedPreferences/Hive)
 - [x] Auto-login al abrir app
 - [x] Validación de token al iniciar
@@ -122,6 +127,7 @@ lib/
 ## 🏗️ Tareas Detalladas
 
 ### Tarea 1.1: Entities & Models
+
 - [ ] Actualizar `user_entity.dart`:
   - Agregar: `rootId`, `companyId`, `createdAt`
 - [ ] Crear `company_entity.dart`:
@@ -130,6 +136,7 @@ lib/
 - [ ] Crear `company_model.dart` con `@JsonSerializable`
 
 ### Tarea 1.2: Repository Interfaces
+
 - [ ] Actualizar `auth_repository.dart`:
   ```dart
   abstract class AuthRepository {
@@ -152,6 +159,7 @@ lib/
   ```
 
 ### Tarea 1.3: Remote DataSources
+
 - [ ] Crear `auth_remote_datasource.dart` (interface)
 - [ ] Implementar `supabase_auth_remote_datasource_impl.dart`:
   - Google sign in/up
@@ -165,28 +173,33 @@ lib/
   - Join company logic
 
 ### Tarea 1.4: Local DataSources
+
 - [ ] Crear `token_local_datasource.dart`:
   - Guardar token localmente
   - Recuperar token
   - Limpiar token al logout
 
 ### Tarea 1.5: Repository Implementations
+
 - [ ] Implementar `auth_repository_impl.dart`
 - [ ] Implementar `user_repository_impl.dart`
 
 ### Tarea 1.6: Use Cases
-- [ ] `login_usecase.dart`
-- [ ] `logout_usecase.dart`
-- [ ] `get_current_user_usecase.dart`
-- [ ] `create_user_onboarding_usecase.dart`
-- [ ] `create_company_usecase.dart`
-- [ ] `join_company_usecase.dart`
+
+- [x] `login_usecase.dart`
+- [x] `logout_usecase.dart`
+- [x] `get_current_user_usecase.dart`
+- [x] `create_user_onboarding_usecase.dart`
+- [x] `create_company_usecase.dart`
+- [x] `join_company_usecase.dart`
 
 ### Tarea 1.7: BLoCs
+
 - [ ] Crear `auth_bloc.dart` + events + states
 - [ ] Crear `user_bloc.dart` + events + states
 
 ### Tarea 1.8: UI Screens
+
 - [ ] `splash_screen.dart` - Check auth status
 - [ ] `login_screen.dart` - Google sign in button
 - [ ] `onboarding_root_screen.dart` - Input Root ID
@@ -194,6 +207,7 @@ lib/
 - [ ] `profile_screen.dart` - Ver/editar perfil
 
 ### Tarea 1.9: Widgets
+
 - [ ] `google_sign_in_button.dart`
 - [ ] `root_input_field.dart` con validación
 - [ ] `company_selector.dart`
@@ -201,6 +215,7 @@ lib/
 - [ ] `company_info_card.dart`
 
 ### Tarea 1.10: Dependency Injection
+
 - [ ] Actualizar `injection_container.dart`:
   - Registrar AuthBloc
   - Registrar UserBloc
@@ -208,12 +223,14 @@ lib/
   - Registrar datasources
 
 ### Tarea 1.11: App Navigation
+
 - [ ] Crear `auth_guard.dart` - Middleware para proteger rutas
 - [ ] Actualizar `app.dart`:
   - BlocListener para cambios de auth
   - Navigation basada en auth state
 
 ### Tarea 1.12: Testing
+
 - [ ] Unit tests para repositories
 - [ ] Unit tests para usecases
 - [ ] Widget tests para screens
