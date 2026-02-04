@@ -42,10 +42,9 @@ class UserRepositoryImpl implements UserRepository {
   }
 
   @override
-  Future<Either<Failure, CompanyEntity>> createCompany(CompanyEntity company) {
+  Future<Either<Failure, CompanyEntity>> createCompany(String name) {
     return _handleUserOperation(() async {
-      final companyModel = CompanyModel.fromEntity(company);
-      final createdModel = await userDataSource.createCompany(companyModel);
+      final createdModel = await userDataSource.createCompany(name);
       return createdModel.toEntity();
     });
   }

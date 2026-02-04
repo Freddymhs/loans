@@ -6,7 +6,7 @@ abstract class UserDataSource {
 
   Future<bool> isRootIdAvailable(String rootId);
 
-  Future<CompanyModel> createCompany(CompanyModel company);
+  Future<CompanyModel> createCompany(String name);
 
   Future<CompanyModel> getCompanyByName(String name);
 

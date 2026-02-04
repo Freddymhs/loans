@@ -47,11 +47,19 @@ class SupabaseUserDataSource implements UserDataSource {
   }
 
   @override
-  Future<CompanyModel> createCompany(CompanyModel company) {
+  Future<CompanyModel> createCompany(String name) {
     return _handleUserErrors(() async {
+      final userId = supabaseClient.auth.currentUser?.id;
+      if (userId == null) {
+        throw Exception('No authenticated user');
+      }
+
       final data = await supabaseClient
           .from('companies')
-          .insert(company.toJson())
+          .insert({
+            'name': name,
+            'created_by': userId,
+          })
           .select()
           .single();
 
