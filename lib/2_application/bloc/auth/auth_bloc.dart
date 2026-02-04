@@ -30,7 +30,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   ) async {
     emit(const AuthLoading());
 
-    final result = await loginWithGoogleUseCase();
+    final result =
+        await loginWithGoogleUseCase.call(); // sin call igualmente funciona
 
     result.fold(
       (failure) => emit(AuthError(failure.message)),
@@ -62,7 +63,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
     result.fold(
       (failure) => emit(AuthError(failure.message)),
-      (user) => emit(user != null ? Authenticated(user) : const Unauthenticated()),
+      (user) =>
+          emit(user != null ? Authenticated(user) : const Unauthenticated()),
     );
   }
 
@@ -70,6 +72,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     IsSessionActiveRequested event,
     Emitter<AuthState> emit,
   ) async {
+    emit(const AuthLoading());
+
     final result = await isSessionActiveUseCase();
 
     await result.fold<Future<void>>(
@@ -86,7 +90,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
         currentUserResult.fold(
           (failure) => emit(AuthError(failure.message)),
-          (user) => emit(user != null ? Authenticated(user) : const Unauthenticated()),
+          (user) => emit(
+              user != null ? Authenticated(user) : const Unauthenticated()),
         );
       },
     );
