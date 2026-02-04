@@ -11,7 +11,7 @@ abstract class UserRepository {
   Future<Either<Failure, bool>> isRootIdAvailable(String rootId);
 
   /// Create a new company
-  Future<Either<Failure, CompanyEntity>> createCompany(CompanyEntity company);
+  Future<Either<Failure, CompanyEntity>> createCompany(String name);
 
   /// Get company by name
   Future<Either<Failure, CompanyEntity>> getCompanyByName(String name);

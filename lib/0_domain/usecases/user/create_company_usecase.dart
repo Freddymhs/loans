@@ -8,7 +8,7 @@ class CreateCompanyUseCase {
 
   final UserRepository userRepository;
 
-  Future<Either<Failure, CompanyEntity>> call(CompanyEntity company) {
-    return userRepository.createCompany(company);
+  Future<Either<Failure, CompanyEntity>> call(String name) {
+    return userRepository.createCompany(name);
   }
 }

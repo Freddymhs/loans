@@ -8,7 +8,7 @@ class GetUserByIdUseCase {
 
   final UserRepository userRepository;
 
-  Future<Either<Failure, UserEntity>> call(String userId) {
-    return userRepository.getUserById(userId);
+  Future<Either<Failure, UserEntity>> call(UserEntity user) {
+    return userRepository.getUserById(user.id);
   }
 }

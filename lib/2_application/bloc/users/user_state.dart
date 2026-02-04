@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:loans/0_domain/entities/company_entity.dart';
 
 abstract class UserState extends Equatable {
   const UserState();
@@ -27,4 +28,22 @@ class UserError extends UserState {
 
   @override
   List<Object?> get props => [message];
+}
+
+/// Resultado de chequear disponibilidad de rootId.
+class RootIdAvailabilityState extends UserState {
+  const RootIdAvailabilityState(this.isAvailable);
+
+  final bool isAvailable;
+
+  @override
+  List<Object?> get props => [isAvailable];
+}
+
+class CompanyLoadedState extends UserState {
+  const CompanyLoadedState(this.company);
+  final CompanyEntity company;
+
+  @override
+  List<Object?> get props => [company];
 }
